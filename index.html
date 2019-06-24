@@ -105,17 +105,42 @@
         .inner {
         	float: right;
         }
+
+        .col1 {
+        	display: inline-block;
+        	vertical-align: top;
+        }
+
+
+
+        @media (prefers-color-scheme: dark) {
+   	    	body {
+			--main-color: black;
+			--accent-color: white;
+		}
         
 
+        }
+
+        @media(min-width: 894px) {
+        	#uno {
+        		padding-right: 128px;
+        	}
+        	.container {
+        		width: 878px;
+        	}
+        }
 
 
     </style>
 
     	<div class="container">
-
-    	<div class="block">
+    		<div class="block">
     		<div class="heading">Alexey Primechaev</div>
     	</div>
+
+    	<div class="col1" id="uno">
+    	
     	
 
     	<div class="block">
@@ -176,15 +201,7 @@
 			</div>
 		</div>
 
-		<div class="block">
-
-			<div class="heading">Education</div>
-
-			<div class="regular">
-				2016 – 2020 — Bachelor in Business Informatics, National Research University «Higher School of Economics», Faculty of Business and Management.
-			</div>
-
-		</div>
+		
 
 		<div class="block">
 
@@ -214,7 +231,23 @@
 
 		</div>
 
+		</div>
+
+		<div class="col1">
+
+			<div class="block">
+
+			<div class="heading">Education</div>
+
+			<div class="regular">
+				2016 – 2020 — Bachelor in Business Informatics, National Research University «Higher School of Economics», Faculty of Business and Management.
+			</div>
+
+		</div>
+		
+
 		<div class="block">
+
 
 			<div class="heading">Skills</div>
 
@@ -270,6 +303,7 @@
 
 			
 		</div>
+	</div>
 	</div>
     
     
