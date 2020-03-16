@@ -11,16 +11,16 @@
 
   <body>
     <style>
-		body {
-	        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	        font-size: 17px;
-	        padding: 14px;
-	        
-    	}
-    	* {
-    		margin: 0;
-    		padding: 0;
-    	}
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 17px;
+            padding: 14px;
+            
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
         button {
             border:none;
@@ -28,36 +28,36 @@
             background-color: transparent;
         }
 
-    	.container {
+        .container {
             width: 1252px;
             margin: 0 auto;
-    		display: grid;
-    		grid-template-columns: 25% 25% 25% 25%;
-    		column-gap: 0px;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            column-gap: 0px;
             .transition: 0.2s;
-    	}
+        }
 
-    	.card {
+        .card {
             display: flex;
             position: relative;
-    		width: 257px;
+            width: 257px;
             height: 257px;
-    		background-color: #EFF0F1;
-    		padding: 14px;
-    		transition: 0.2s;
-    		margin: 14px;
-    	}
+            background-color: #EFF0F1;
+            padding: 14px;
+            transition: 0.2s;
+            margin: 14px;
+        }
 
-    	.card:hover {
-    		padding: 28px;
-    		margin: 0px;
-    		margin-bottom: 0px; 
+        .card:hover {
+            padding: 28px;
+            margin: 0px;
+            margin-bottom: 0px; 
 
-    	}
+        }
 
-    	.content {
-    		font-weight: 500;
-    	}
+        .content {
+            font-weight: 500;
+        }
 
         .display {
             position: absolute;
@@ -69,18 +69,34 @@
             align-items: center;
         }
 
-    	.image {
+        .image {
             position: relative;
             bottom: 14px;
             transition: 0.2s;
             margin: auto;
-    		width: 63%;
-    	}
+            width: 63%;
+        }
 
         .phone {
             transition: 0.2s;
             margin: auto;
             width: 110px;
+        }
+
+        .document {
+            transition: 0.2s;
+            margin: auto;
+            width: 124px;
+            position: relative;
+            bottom: 14px;
+        }
+
+        .hack {
+            transition: 0.2s;
+            margin: auto;
+            width: 162px;
+            position: relative;
+            bottom: 56px;
         }
 
         .buttons {
@@ -110,6 +126,16 @@
 
         .card:hover .phone, .card.hover .phone { 
             width: 130px;
+            transition: 0.2s;
+        }
+
+        .card:hover .document, .card.hover .document { 
+            width: 164px;
+            transition: 0.2s;
+        }
+
+        .card:hover .hack, .card.hover .hack { 
+            width: 240px;
             transition: 0.2s;
         }
 
@@ -165,19 +191,19 @@
 
     </style>
     <div class="container">
-    	<div class="card">
-    		<div class="content">
-		    	<div class="title">
-		    		Alexey Primechaev
-		    	</div>
-		    	<div class="title secondary">
-		    		Human Interface Designer
-		    	</div>
-		    </div>
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    Alexey Primechaev
+                </div>
+                <div class="title secondary">
+                    Human Interface Designer
+                </div>
+            </div>
             <div class="display">
                 <img class="image" src="img.png">
                 </div>
-		   <div class="buttons">
+           <div class="buttons">
             <a href="https://teleg.run/number16">
                 <img class="icon" src="telegram.png">
             </a>
@@ -188,7 +214,7 @@
                 <img class="icon" src="mail.png">
             </a>
            </div>
-	    </div>
+        </div>
         <div class="card">
             <div class="content">
                 <div class="title">
@@ -202,9 +228,48 @@
                 <img class="phone" src="artwork.png">
                 </div>
            <div class="buttons">
+            <a href="">
+                <img class="icon" src="ellipsis.png">
+            </a>
+            <a href="">
+                <img class="icon" src="play.png">
+            </a>
+           </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    CV
+                </div>
+                <div class="title secondary">
+                    QR-enabled
+                </div>
+            </div>
+            <div class="display">
+                <img class="document" src="cv.png">
+                </div>
+           <div class="buttons">
             <a href="tel:+79999890609">
                 <img class="icon" src="ellipsis.png">
             </a>
+            <a href="mailto:alexeyprimechaev@gmail.com">
+                <img class="icon" src="play.png">
+            </a>
+           </div>
+        </div>
+         <div class="card">
+            <div class="content">
+                <div class="title">
+                    Winner
+                </div>
+                <div class="title secondary">
+                    Hack&Change Hackathon
+                </div>
+            </div>
+            <div class="display">
+                <img class="hack" src="hack.png">
+                </div>
+           <div class="buttons">
             <a href="mailto:alexeyprimechaev@gmail.com">
                 <img class="icon" src="play.png">
             </a>
