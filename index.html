@@ -99,6 +99,14 @@
             position: relative;
             bottom: 56px;
         }
+        
+        .wide {
+            transition: 0.2s;
+            margin: auto;
+            width: 196px;
+            position: relative;
+            bottom: 84px;
+        }
 
         .tools {
             transition: 0.2s;
@@ -163,6 +171,13 @@
             width: 240px;
             transition: 0.2s;
         }
+        
+        .card:hover .wide, .card.hover .wide { 
+            width: 256px;
+            transition: 0.2s;
+        }
+        
+        
 
         .card:hover .tools, .card.hover .tools { 
             width: 220px;
@@ -256,11 +271,30 @@
             <a href="tel:+79999890609">
                 <img class="icon" src="phone.png">
             </a>
-            <a href="https://teleg.run/number16">
+            <a href="https://t.me/number16">
                 <img class="icon" src="telegram.png">
             </a>
             <a href="mailto:alexeyprimechaev@gmail.com">
                 <img class="icon" src="mail.png">
+            </a>
+           </div>
+        </div>
+        
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    Product Designer
+                </div>
+                <div class="title secondary">
+                    At Open Broker
+                </div>
+            </div>
+            <div class="display">
+                <img class="wide" src="broker.png">
+                </div>
+           <div class="buttons">
+            <a href="https://open-broker.ru">
+                <img class="icon" src="link.png">
             </a>
            </div>
         </div>
