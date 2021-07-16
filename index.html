@@ -23,23 +23,77 @@
             padding: 0;
         }
 
+        a {
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            color: black;
+        }
+
+        video {
+            border-radius: 4px;
+            opacity: 0;
+            transition: 0.2;
+            position: relative;
+            top: 11px;
+            width: 74.5px;
+        }
+
         button {
             border:none;
             padding: 0;
             background-color: transparent;
         }
 
-        .container {
+        .section {
             width: 1252px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
             column-gap: 0px;
-            .transition: 0.2s;
+            transition: 0.2s;
         }
 
+        .section2 {
+            width: 1252px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr;
+            column-gap: 0px;
+            transition: 0.2s;
+            padding-top: 28px;
+        }
+
+        .sectiontitle {
+            font-size: 34px;
+            font-weight: 600;
+            padding: 14px;
+        }
+
+        .icon {
+            opacity: 0;
+            transition: 0.2s;
+            font-size: 24px;
+            position: absolute;
+            bottom: 21px;
+            right: 14px;
+            font-weight: 300;
+        }
+
+
         .card {
-            display: flex;
+            position: relative;
+            width: 257px;
+            height: 257px;
+            background-color: #EFF0F1;
+            padding: 14px;
+            transition: 0.2s;
+            margin: 14px;
+        }
+
+        .videocard {
             position: relative;
             width: 257px;
             height: 257px;
@@ -56,13 +110,44 @@
 
         }
 
+        .videocard:hover {
+            padding: 28px;
+            margin: 0px;
+            margin-bottom: 0px; 
+
+        }
+
+        .large {
+            display: flex;
+            position: relative;
+            background-color: #EFF0F1;
+            padding: 14px;
+            transition: 0.2s;
+            margin: 14px;
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .large:hover {
+            padding: 28px;
+            margin: 0px;
+            margin-bottom: 0px; 
+
+        }
+
         .content {
+            transition: 0.2s;
             font-weight: 500;
+            position: absolute;
+            bottom: 14px;
+            right: 0%;
+            width: 100%;
+            text-align: center;
         }
 
         .display {
             position: absolute;
-            bottom: 14px;
+            top: 28px;
             right: 0%;
             width: 100%;
             display: flex;
@@ -71,76 +156,32 @@
         }
 
         .image {
-            position: relative;
-            bottom: 14px;
+            position: absolute;
+            top: 0px;
             transition: 0.2s;
+            width: 183px;
             margin: auto;
-            width: 63%;
         }
 
-        .phone {
+        .frame {
+            opacity: 0;
+            position: absolute;
+            top: 0px;
             transition: 0.2s;
+            width: 183px;
             margin: auto;
-            width: 110px;
-        }
-      
-        .phone12 {
-            transition: 0.2s;
-            margin: auto;
-            width: 130px;
-            position: relative;
-            top: 20px;
         }
 
-        .document {
+        .imageplaceholder {
+            position: absolute;
+            top: 0px;
             transition: 0.2s;
+            width: 183px;
             margin: auto;
-            width: 124px;
-            position: relative;
-            bottom: 14px;
-        }
-
-        .hack {
-            transition: 0.2s;
-            margin: auto;
-            width: 162px;
-            position: relative;
-            bottom: 56px;
-        }
-        
-        .wide {
-            transition: 0.2s;
-            margin: auto;
-            width: 196px;
-            position: relative;
-            bottom: 84px;
-        }
-
-        .tools {
-            transition: 0.2s;
-            margin: auto;
-            width: 180px;
-            position: relative;
-            bottom: 56px;
-        }
-
-        .courses {
-            transition: 0.2s;
-            margin: auto;
-            width: 180px;
-            position: relative;
-            bottom: 42px;
-        }
-
-        .circle {
-            transition: 0.2s;
-            margin: auto;
-            width: 132px;
-            position: relative;
-            bottom: 42px;
         }
 
         .buttons {
+            opacity: 0;
             justify-content: center;
             align-items: center;
             width: 28px;
@@ -151,98 +192,117 @@
             transition: 0.2s;
         }
 
-        .icon {
-            height: 25px;
-            padding: 5px;
-        }
-
         .secondary {
+            opacity: 0.5;
             transition: 0.2s;
         }
 
         .card:hover .image, .card.hover .image { 
-            width: 75%;
+            top: -14px;
+            width: 235px;
             transition: 0.2s;
-        }
+        }          
 
-        .card:hover .phone, .card.hover .phone { 
-            width: 130px;
+        .card:hover .icon, .card.hover .icon { 
+            opacity: 1;
             transition: 0.2s;
-        }
-      
-        .card:hover .phone12, .card.hover .phone { 
-            width: 158px;
-            transition: 0.2s;
-        }
-
-        .card:hover .document, .card.hover .document { 
-            width: 164px;
-            transition: 0.2s;
-        }
-
-        .card:hover .hack, .card.hover .hack { 
-            width: 240px;
-            transition: 0.2s;
-        }
-        
-        .card:hover .wide, .card.hover .wide { 
-            width: 256px;
-            transition: 0.2s;
-        }
-        
-        
-
-        .card:hover .tools, .card.hover .tools { 
-            width: 220px;
-            transition: 0.2s;
-        }
-
-        .card:hover .courses, .card.hover .courses { 
-            width: 220px;
-            transition: 0.2s;
-        }
-
-        .card:hover .circle, .card.hover .circle { 
-            width: 180px;
-            transition: 0.2s;
-        }
-
-        .card:hover .buttons, .card.hover .buttons { 
-            transition: 0.2s;
-            bottom: 21px;
-            right: 35px;
+            bottom: 35px;
+            right: 28px;
         }
 
         .card:hover .secondary, .card.hover .secondary { 
+            opacity: 0.5;
+        }
+
+        .card:hover .content, .card.hover .content { 
+            transition: 0.2s;
+            bottom: 28px;
+        }
+
+        .videocard:hover .frame, .videocard.hover .frame { 
+            opacity: 1;
+            position: absolute;
+            top: -14px;
+            width: 286px;
+            transition: 0.2s;
+        }  
+        
+        .videocard:hover .imageplaceholder, .videocard.hover .imageplaceholder { 
+            position: absolute;
+            top: -14px;
+            width: 285px;
+            transition: 0.2s;
+            opacity: 0;
+        }  
+
+        .videocard:hover .icon, .videocard.hover .icon { 
+            opacity: 1;
+            transition: 0.2s;
+            bottom: 35px;
+            right: 28px;
+        }
+
+        .videocard:hover .title, .videocard.hover .title { 
             opacity: 0;
         }
+
+        .videocard:hover .content, .videocard.hover .content { 
+            transition: 0.2s;
+            bottom: 28px;
+        }
+
+        .videocard:hover video, .videocard.hover video { 
+            opacity: 1;
+            transition: 0.2;
+            top: 3px;
+            transition: 0.2s;
+            width: 116.5px;
+            bottom: 28px;
+        }
+
         @media screen and (min-width: 1599px) {
-            .container {
+            .section {
                 width: 1600px;
                 grid-template-columns: 20% 20% 20% 20% 20%;
                 column-gap: 0px;
                 padding-left: calc((100% - 1280)/2);
-                padding-right: padding-left: : calc((100% - 1280)/2);
+                padding-right: calc((100% - 1280)/2);
             }
         }
 
         @media screen and (max-width: 1279px) {
-            .container {
+            .section {
                 width: 960px;
                 grid-template-columns: 33% 33% 33%;
                 column-gap: 0px;
                 padding-left: calc((100% - 960)/2);
-                padding-right: padding-left: : calc((100% - 960)/2);
+                padding-right: calc((100% - 960)/2);
+            }
+
+            .section2 {
+                width: 960px;
+                grid-template-columns: 100%;
+                column-gap: 0px;
+                padding-left: calc((100% - 960)/2);
+                padding-right: calc((100% - 960)/2);
             }
         }
 
         @media screen and (max-width: 959px) {
-            .container {
+            .section {
                 width: 640px;
                 grid-template-columns: 50% 50%;
                 column-gap: 0px;
                 padding-left: calc((100% - 640)/2);
-                padding-right: padding-left: : calc((100% - 640)/2);
+                padding-right: calc((100% - 640)/2);
+            }
+
+            .section2 {
+                width: 640px;
+                grid-template-columns: 100%;
+                column-gap: 0px;
+                padding-left: calc((100% - 640)/2);
+                padding-right: calc((100% - 640)/2);
             }
             
         }
@@ -251,15 +311,27 @@
             .content {
                 font-weight: 600;
             }
+            .sectiontitle {
+                font-weight: 700;
+            }
         }
 
+
         @media screen and (max-width: 639px) {
-            .container {
+            .section {
                 width: 320px;
                 grid-template-columns: 100%;
                 column-gap: 0px;
                 padding-left: calc((100% - 320)/2);
-                padding-right: padding-left: : calc((100% - 320)/2);
+                padding-right: calc((100% - 320)/2);
+            }
+
+            .section2 {
+                width: 320px;
+                grid-template-columns: 100%;
+                column-gap: 0px;
+                padding-left: calc((100% - 320)/2);
+                padding-right: calc((100% - 320)/2);
             }
         }
       
@@ -267,7 +339,11 @@
 
 
     </style>
-    <div class="container">
+    <div class="section2">
+        <div class="sectiontitle">Me</div>
+    </div>
+    <div class="section">
+        <a href="https://t.me/number16">
         <div class="card">
             <div class="content">
                 <div class="title">
@@ -279,20 +355,15 @@
             </div>
             <div class="display">
                 <img class="image" src="img.png">
-                </div>
-           <div class="buttons">
-            <a href="tel:+79999890609">
-                <img class="icon" src="phone.png">
-            </a>
-            <a href="https://t.me/number16">
-                <img class="icon" src="telegram.png">
-            </a>
-            <a href="mailto:alexeyprimechaev@gmail.com">
-                <img class="icon" src="mail.png">
-            </a>
-           </div>
+            </div>
+
+           
+            
+   
         </div>
-        
+    </a>
+
+    <a href="https://open-broker.ru">
         <div class="card">
             <div class="content">
                 <div class="title">
@@ -303,111 +374,151 @@
                 </div>
             </div>
             <div class="display">
-                <img class="wide" src="broker.png">
-                </div>
-           <div class="buttons">
-            <a href="https://open-broker.ru">
-                <img class="icon" src="link.png">
-            </a>
-           </div>
-        </div>
-      
-      <div class="card">
-            <div class="content">
-                <div class="title">
-                    CV
-                </div>
-                <div class="title secondary">
-                    QR-enabled
-                </div>
+                <img class="image" src="broker.png">
             </div>
-            <div class="display">
-                <img class="document" src="cv.png">
-                </div>
-           <div class="buttons">
-            <a href="cv.pdf">
-                <img class="icon" src="print.png">
-            </a>
-           </div>
+            
+            <div class="icon">↗</div>
         </div>
-      
-      <div class="card">
-            <div class="content">
-                <div class="title">
-                    Design Fintech Conf 2020
-                </div>
-                <div class="title secondary">
-                    Speaker
-                </div>
-            </div>
-            <div class="display">
-                <img class="circle" src="fintech.png">
-                </div>
-           <div class="buttons">
-            <a href="https://fintechdesign.ru">
-                <img class="icon" src="link.png">
-            </a>
-           </div>
-        </div>
-      
-      <div class="card">
-            <div class="content">
-                <div class="title">
-                    Open Broker
-                </div>
-                <div class="title secondary">
-                    Mobile App Redesign
-                </div>
-            </div>
-            <div class="display">
-                <img class="phone12" src="open-redesign.png">
-            </div>
-           <div class="buttons">
-            <a href="https://apps.apple.com/ru/app/открытие-брокер-инвестиции/id1323971242">
-                <img class="icon" src="download.png">
-            </a>
-           </div>
-        </div>
+    </a>
 
+    <a href="https://lekskeks.com">
         <div class="card">
             <div class="content">
                 <div class="title">
-                    Higher School of Economics
+                    Co-Founder
+                </div>
+                <div class="title secondary">
+                    Lekskeks Prod
+                </div>
+            </div>
+            <div class="display">
+                <img class="image" src="lekskeks.png">
+            </div>
+            
+            <div class="icon">↗</div>
+        </div>
+    </a>
+
+        
+    <a href="https://www.hse.ru/en/ba/bi/">
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    Bachelor
                 </div>
                 <div class="title secondary">
                     Business Informatics
                 </div>
             </div>
             <div class="display">
-                <img class="circle" src="hse.png">
+                <img class="image" src="hse.png">
                 </div>
-           <div class="buttons">
-            <a href="https://www.hse.ru/en/ba/bi/">
-                <img class="icon" src="doc.png">
-            </a>
-           </div>
+            
+                <div class="icon">↗</div>
+            
         </div>
-
+    </a>
+    
+    <a href="https://design.hse.ru/ma/designmarketing">
         <div class="card">
             <div class="content">
                 <div class="title">
-                    Courses
+                    MA Student
                 </div>
                 <div class="title secondary">
-                    2016-2020
+                    Digital Product Design
                 </div>
             </div>
             <div class="display">
-                <img class="courses" src="courses.png">
+                <img class="image" src="hsedesign.png">
                 </div>
-           <div class="buttons">
-            <a href="old.html">
-                <img class="icon" src="doc.png">
-            </a>
-           </div>
+            
+                <div class="icon">↗</div>
+            
         </div>
+    </a>
 
+    <a href="https://www.hse.ru/en/ba/bi/">
         <div class="card">
+            <div class="content">
+                <div class="title">
+                    Skills
+                </div>
+                <div class="title secondary">
+                    Some Of What I Do
+                </div>
+            </div>
+            <div class="display">
+                <img class="image" src="skills.png">
+                </div>
+            
+            
+        </div>
+    </a>
+
+    <a href="cv.pdf">
+      <div class="card">
+            <div class="content">
+                <div class="title">
+                    CV
+                </div>
+                <div class="title secondary">
+                    For Fun
+                </div>
+            </div>
+            <div class="display">
+                <img class="image" src="cv.png">
+            </div>
+            
+            <div class="icon">↗</div>
+            </div>
+        </div>
+    </a>
+
+    
+      
+
+        
+
+        
+
+        
+
+        
+
+        
+
+
+    </div>
+
+    <div class="section2">
+        <div class="sectiontitle">Shipped Products</div>
+    </div>
+    <div class="section">
+
+        
+      
+
+        <a href="https://apps.apple.com/ru/app/открытие-брокер-инвестиции/id1323971242">
+      <div class="card">
+            <div class="content">
+                <div class="title">
+                    Open Broker
+                </div>
+                <div class="title secondary">
+                    Stock Trading App
+                </div>
+            </div>
+            <div class="display">
+                <img class="image" src="openbrokericon.png">
+            </div>
+            
+            <div class="icon">↗</div>            
+        </div>
+    </a>
+
+    <a href="https://apps.apple.com/app/timepiece-unlimited-timers/id1506052142?l=en">
+        <div class="videocard">
             <div class="content">
                 <div class="title">
                     TimePiece
@@ -417,272 +528,179 @@
                 </div>
             </div>
             <div class="display">
-                <img class="phone12" src="artwork.png">
+                <video autoplay loop muted src="kinomini.mov"></video>
+                <img class="frame" src="frame.png">
+                <img class="imageplaceholder" src="timepieceicon.png">
             </div>
-           <div class="buttons">
-            <a href="https://i.imgur.com/UvOZLQ4.mp4">
-                <img class="icon" src="ellipsis.png">
-            </a>
-            <a href="https://apps.apple.com/app/timepiece-unlimited-timers/id1506052142?l=en">
-                <img class="icon" src="download.png">
-            </a>
-           </div>
+            <div class="icon">↗</div>
         </div>
+    </a>
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Winner
-                </div>
-                <div class="title secondary">
-                    Hack&Change Hackathon
-                </div>
-            </div>
-            <div class="display">
-                <img class="hack" src="hack.png">
-                </div>
-           <div class="buttons">
-            <a href="https://dribbble.com/shots/5741540-Raiffeisenbank-information-terminal-concept">
-                <img class="icon" src="link.png">
-            </a>
-           </div>
-        </div>
+
       
-      <div class="card">
-            <div class="content">
-                <div class="title">
-                    Tools
-                </div>
-                <div class="title secondary">
-                    Design and Otherwise
-                </div>
-            </div>
-            <div class="display">
-                <img class="tools" src="tools.png">
-                </div>
-           <div class="buttons">
-            <a href="old.html">
-                <img class="icon" src="doc.png">
-            </a>
-           </div>
-        </div>
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Social Networks
-                </div>
-                <div class="title secondary">
-                    Twitter, Instagram
-                </div>
-            </div>
-            <div class="display">
-                <img class="circle" src="avatar.png">
-                </div>
-           <div class="buttons">
-            <a href="https://www.twitter.com/numberl6/">
-                <img class="icon" src="twitter.png">
-            </a>
-            <a href="https://www.instagram.com/aleshavinsteogo/">
-                <img class="icon" src="instagram.png">
-            </a>
-           </div>
-        </div>
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Nots (WIP)
-                </div>
-                <div class="title secondary">
-                    Revolutionary note-taking app
-                </div>
-            </div>
-            <div class="display">
-                <img class="phone" src="nots.png">
-                </div>
-           <div class="buttons">
-            <a href="https://i.imgur.com/wc4rMJ2.mp4">
-                <img class="icon" src="ellipsis.png">
-            </a>
-            <a href="https://i.imgur.com/90xZeFM.mp4">
-                <img class="icon" src="play.png">
-            </a>
-           </div>
-        </div>
-
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Rating10
-                </div>
-                <div class="title secondary">
-                    Rate Anything
-                </div>
-            </div>
-            <div class="display">
-                <img class="phone" src="rating.png">
-                </div>
-           <div class="buttons">
-            <a href="">
-                <img class="icon" src="ellipsis.png">
-            </a>
-            <a href="https://apps.apple.com/app/rating10-rate-anything/id1491935617?l=en">
-                <img class="icon" src="download.png">
-            </a>
-           </div>
-        </div>
+    
+        
 
         
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    AMP Conf 2019 be Google
-                </div>
-                <div class="title secondary">
-                    Attendee
-                </div>
-            </div>
-            <div class="display">
-                <img class="circle" src="amp.png">
-                </div>
-           <div class="buttons">
-            <a href="https://amp.dev/events/amp-conf-2019/">
-                <img class="icon" src="link.png">
-            </a>
-           </div>
-        </div>
+        <a href="https://apps.apple.com/app/2006-camera/id1575592620">
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Rating
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        2006 Camera
+                    </div>
+                    <div class="title secondary">
+                        Retro Low-Res Camera
+                    </div>
                 </div>
-                <div class="title secondary">
-                    Old App for Ratings
+                <div class="display">
+                    <img class="image" src="2006cameraicon.png">
                 </div>
+                <div class="icon">↗</div>                
             </div>
-            <div class="display">
-                <img class="hack" src="oldrating.png">
-                </div>
-           <div class="buttons">
-            <a href="https://number16.github.io/rating">
-                <img class="icon" src="download.png">
-            </a>
-           </div>
-        </div>
+        </a>
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Secret projects at Sberbank
-                </div>
-                <div class="title secondary">
-                    Summer of 2019
-                </div>
-            </div>
-            <div class="display">
-                <img class="hack" src="sber.png">
-                </div>
-           <div class="buttons">
-           </div>
-        </div>
+        <a href="https://apps.apple.com/app/reflect-be-mindful/id1573287504">
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Old Personal Page
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        Reflect
+                    </div>
+                    <div class="title secondary">
+                        Be Mindful
+                    </div>
                 </div>
-                <div class="title secondary">
-                    Website
+                <div class="display">
+                    <img class="image" src="reflecticon.png">
                 </div>
+                <div class="icon">↗</div>                
             </div>
-            <div class="display">
-                <img class="hack" src="oldsite.png">
-                </div>
-           <div class="buttons">
-            <a href="old.html">
-                <img class="icon" src="link.png">
-            </a>
-           </div>
-        </div>
+        </a>
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Monochrome Studios
-                </div>
-                <div class="title secondary">
-                    Logo
-                </div>
-            </div>
-            <div class="display">
-                <img class="circle" src="mnchr.png">
-                </div>
-           <div class="buttons">
-            <a href="https://number16.github.io">
-                <img class="icon" src="link.png">
-            </a>
-           </div>
-        </div>
+        <a href="https://apps.apple.com/app/reflect-ai-be-mindful/id1575792926">
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Monochrome Studios
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        Reflect AI
+                    </div>
+                    <div class="title secondary">
+                        AI Assisted Mindfulness
+                    </div>
                 </div>
-                <div class="title secondary">
-                    Website
+                <div class="display">
+                    <img class="image" src="reflectaiicon.png">
                 </div>
+                <div class="icon">↗</div>                
             </div>
-            <div class="display">
-                <img class="hack" src="monochrome.png">
-                </div>
-           <div class="buttons">
-            <a href="https://number16.github.io">
-                <img class="icon" src="link.png">
-            </a>
-           </div>
-        </div>
+        </a>
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Monochrome Icons
-                </div>
-                <div class="title secondary">
-                    Icon Collection
-                </div>
-            </div>
-            <div class="display">
-                <img class="hack" src="icons.png">
-                </div>
-           <div class="buttons">
-            <a href="https://number16.github.io">
-                <img class="icon" src="link.png">
-            </a>
-           </div>
-        </div>
+        <a href="https://apps.apple.com/app/moodline-simple-mood-tracking/id1500129608">
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Monochrome Design System
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        Moodline
+                    </div>
+                    <div class="title secondary">
+                        Simple Mood Tracking
+                    </div>
                 </div>
-                <div class="title secondary">
-                    Elements Collection
+                <div class="display">
+                    <img class="image" src="moodlineicon.png">
                 </div>
+                <div class="icon">↗</div>                
             </div>
-            <div class="display">
-                <img class="hack" src="library.png">
+        </a>
+
+        <a href="https://apps.apple.com/app/rollercaller/id1506216664">
+
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        RollerCaller
+                    </div>
+                    <div class="title secondary">
+                        A Lesson in Usability
+                    </div>
                 </div>
-           <div class="buttons">
-            <a href="https://number16.github.io">
-                <img class="icon" src="link.png">
-            </a>
-           </div>
-        </div>
+                <div class="display">
+                    <img class="image" src="rollercallericon.png">
+                </div>
+                <div class="icon">↗</div>                
+            </div>
+        </a>
+
+
+        
+
+        <a href="https://apps.apple.com/app/rating10-rate-anything/id1491935617?l=en">
+
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        Rating10
+                    </div>
+                    <div class="title secondary">
+                        Rate Anything
+                    </div>
+                </div>
+                <div class="display">
+                    <img class="image" src="rating10icon.png">
+                </div>
+                <div class="icon">↗</div>                
+            </div>
+
+
+       
+
+        <a href="https://apps.apple.com/app/readstack/id1558413561">
+
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        Readstack
+                    </div>
+                    <div class="title secondary">
+                        Stress-free Reading List
+                    </div>
+                </div>
+                <div class="display">
+                    <img class="image" src="readstackicon.png">
+                </div>
+                <div class="icon">↗</div>                
+            </div>
+        </a>
+
+        <a href="https://apps.apple.com/app/tap-me-every-x-minutes/id1511695154">
+
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        Tap Me Every
+                    </div>
+                    <div class="title secondary">
+                        Repeating Notifications
+                    </div>
+                </div>
+                <div class="display">
+                    <img class="image" src="tapmeicon.png">
+                </div>
+                <div class="icon">↗</div>                
+            </div>
+        </a>
+
+        
+        
+
+
+
+
+    <a href="https://apps.apple.com/us/app/chroma-simple-screen-testing/id1404984004?ref=producthunt">
 
         <div class="card">
             <div class="content">
@@ -694,16 +712,213 @@
                 </div>
             </div>
             <div class="display">
-                <img class="hack" src="chroma.png">
+                <img class="image" src="chroma.png">
                 </div>
-           <div class="buttons">
-            <a href="https://apps.apple.com/us/app/chroma-simple-screen-testing/id1404984004?ref=producthunt">
-                <img class="icon" src="download.png">
-            </a>
-           </div>
+                <div class="icon">↗</div>
         </div>
+    </a>
+
 
     </div>
+
+    <div class="section2">
+        <div class="sectiontitle">Activity</div>
+    </div>
+    <div class="section">
+        <a href="https://fintechdesign.ru">
+
+            <div class="card">
+                  <div class="content">
+                      <div class="title">
+                          Design Fintech Conf 2020
+                      </div>
+                      <div class="title secondary">
+                          Speaker
+                      </div>
+                  </div>
+                  <div class="display">
+                      <img class="image" src="fintech.png">
+                      </div>
+                      <div class="icon">↗</div>
+              </div>
+          </a>
+
+          <a href="https://dribbble.com/shots/5741540-Raiffeisenbank-information-terminal-concept">
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        Winner
+                    </div>
+                    <div class="title secondary">
+                        Hack&Change Hackathon
+                    </div>
+                </div>
+                <div class="display">
+                    <img class="image" src="hack.png">
+                    </div>
+                    <div class="icon">↗</div>
+            </div>
+        </a>
+
+        <a href="https://amp.dev/events/amp-conf-2019/">
+
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        AMP Conf 2019 be Google
+                    </div>
+                    <div class="title secondary">
+                        Attendee
+                    </div>
+                </div>
+                <div class="display">
+                    <img class="image" src="amp.png">
+                    </div>
+                    <div class="icon">↗</div>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="section2">
+        <div class="sectiontitle">Older Stuff (i ain't gonna clean this up)</div>
+    </div>
+    <div class="section">
+
+        
+        
+
+    <div class="card">
+        <div class="content">
+            <div class="title">
+                Secret projects at Sberbank
+            </div>
+            <div class="title secondary">
+                Summer of 2019
+            </div>
+        </div>
+        <div class="display">
+            <img class="image" src="sber.png">
+            </div>
+    </div>
+    
+
+    <a href="https://number16.github.io/rating">
+
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    Rating (2018)
+                </div>
+                <div class="title secondary">
+                    Old App for Ratings
+                </div>
+            </div>
+            <div class="display">
+                <img class="image" src="oldrating.png">
+            </div>
+            <div class="icon">↗</div>
+        </div>
+    </a>
+
+    <!-- <a href="https://i.imgur.com/90xZeFM.mp4"> -->
+
+        <a href="https://i.imgur.com/wc4rMJ2.mp4">
+
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        Nots (Concept, 2019)
+                    </div>
+                    <div class="title secondary">
+                        Experimental Note-Taking App
+                    </div>
+                </div>
+                <div class="display">
+                    <img class="image" src="nots.png">
+                    </div>
+                    <div class="icon">↗</div>
+            </div>
+            </a>
+
+    
+
+    <a href="old.html">
+
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    Old Personal Page (2018)
+                </div>
+                <div class="title secondary">
+                    Website
+                </div>
+            </div>
+            <div class="display">
+                <img class="image" src="oldsite.png">
+                </div>
+                <div class="icon">↗</div>
+        </div>
+    </a>
+
+    <a href="https://number16.github.io">
+
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    Monochrome Studios (2019)
+                </div>
+                <div class="title secondary">
+                    Logo
+                </div>
+            </div>
+            <div class="display">
+                <img class="image" src="mnchr.png">
+                </div>
+                <div class="icon">↗</div>
+        </div>
+    </a>
+
+    <a href="https://number16.github.io">
+
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    Mnchr Icons (2018–2019)
+                </div>
+                <div class="title secondary">
+                    Icon Collection
+                </div>
+            </div>
+            <div class="display">
+                <img class="image" src="icons.png">
+                </div>
+                <div class="icon">↗</div>
+        </div>
+    </a>
+
+
+    <a href="https://number16.github.io">
+
+        <div class="card">
+            <div class="content">
+                <div class="title">
+                    Mnchr DS (2019)
+                </div>
+                <div class="title secondary">
+                    Elements Collection
+                </div>
+            </div>
+            <div class="display">
+                <img class="image" src="library.png">
+                </div>
+                <div class="icon">↗</div>
+        </div>
+    </a>
+
+
+    </div>
+    
     
   </body>
 </html>
