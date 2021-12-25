@@ -509,6 +509,11 @@ body {
 a {
   text-decoration: none; }
 
+.description {
+  text-align: left;
+  font-size: 17px;
+}
+
 .btn {
   -webkit-transition: opacity 0.3s ease-in-out;
           transition: opacity 0.3s ease-in-out;
@@ -519,7 +524,7 @@ a {
   color: #fff;
   background: #007aff;
   border-radius: 8px;
-  padding-top: 100px;
+  padding-top: 24px;
   padding: 10px 25px;
   margin-bottom: 25px; }
   .btn:hover {
@@ -533,7 +538,7 @@ a {
   .btn {
     font-size: 18px;
     padding: 15px 45px; 
-    margin-top: 128px; } }
+    margin-top: 24px; } }
   .btn [class^='icon'] {
     display: inline-block;
     font-size: 29px;
@@ -561,8 +566,13 @@ a {
   .logo {
     width: 100%; } }
 
+  ul {
+    padding-top: 16px;
+  }
+
 li {
   padding-bottom: 8px;
+  font-size: 20px;
   font-weight: 400;
 }
 
