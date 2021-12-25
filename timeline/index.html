@@ -55,7 +55,25 @@
 	<!-- Event snippet for Website lead conversion page -->
 	<script>
 		gtag('event', 'conversion', {'send_to': 'AW-10830755918/1I0GCPDVsYwDEM7wwKwo'});
-  </script>
+  	</script>
+
+	  <!-- Event snippet for Sign-up Click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+		<script>
+		function gtag_report_conversion(url) {
+		var callback = function () {
+			if (typeof(url) != 'undefined') {
+			window.location = url;
+			}
+		};
+		gtag('event', 'conversion', {
+			'send_to': 'AW-10830755918/S9UpCMnijIwDEM7wwKwo',
+			'event_callback': callback
+		});
+		return false;
+		}
+		</script>
+	
   
   
 
@@ -86,7 +104,8 @@
 					</div>
 
 					<!-- button  -->
-					<a href="https://tinyletter.com/number16" class="btn"></span>Get on the App Store</a>
+					<a class="btn" onclick="return gtag_report_conversion('http://example.com/your-link');"
+					href="https://tinyletter.com/number16" href="https://tinyletter.com/number16"></span>Get on the App Store</a>
 
 					
 
