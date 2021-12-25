@@ -113,7 +113,9 @@ dfn {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0; 
+  padding-top: -44px;
+  }
 
 /**
  * Address styling not present in IE 8/9.
@@ -515,7 +517,7 @@ a {
   line-height: 32px;
   letter-spacing: -.4px;
   color: #fff;
-  background: #000000;
+  background: #007aff;
   border-radius: 8px;
   padding-top: 100px;
   padding: 10px 25px;
@@ -542,8 +544,8 @@ a {
   width: 50%;
   max-width: 1000px;
   padding-top: 60px;
-  margin-bottom: 32px;
-  margin: 0 auto 29px; }
+  margin-bottom: 0px;
+  margin: 0 auto 0px; }
 
 @media screen and (min-width: 750px) {
   .logo {
@@ -558,6 +560,11 @@ a {
 @media screen and (min-width: 1400px) {
   .logo {
     width: 100%; } }
+
+li {
+  padding-bottom: 8px;
+  font-weight: 400;
+}
 
 h1, .h1 {
   margin-bottom: 41px; }
@@ -724,7 +731,7 @@ form#mailinglist { margin-top: 90px }
 [id='aside'] {
   position: relative;
   color: #000;
-  text-align: right;
+  text-align: center;
   background-color: #F2F2F7; }
 
 @media screen and (min-width: 1024px) {
@@ -752,7 +759,7 @@ form#mailinglist { margin-top: 90px }
     min-height: 604px; } }
 
     [id='aside'] img {
-      max-width: 95.5%; } }
+      max-width: 95.5%; } 
 
 @media screen and (min-width: 1024px) {
   [id='aside'] .img-holder {
@@ -769,10 +776,10 @@ form#mailinglist { margin-top: 90px }
     min-height: 655px;
     padding: 60px 0; } }
   [id='aside'] img {
-    max-width: 80%;
-    -webkit-transform: translate(31px, -62.5%);
-        -ms-transform: translate(31px, -62.5%);
-            transform: translate(31px, -62.5%); }
+    max-width: 95%;
+    -webkit-transform: translate(-0px, -62.5%);
+        -ms-transform: translate(-0px, -62.5%);
+            transform: translate(-0px, -62.5%); }
 
 @media screen and (min-width: 750px) {
   [id='aside'] img {
