@@ -13,6 +13,7 @@
     <style>
 
         body {
+            background-color: #FFFFFF;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             font-size: 17px;
             padding: 14px;
@@ -33,12 +34,9 @@
         }
 
         video {
-            border-radius: 4px;
-            opacity: 0;
-            transition: 0.2;
-            position: relative;
-            top: 11px;
-            width: 74.5px;
+          	opacity: 0;
+            transition: 0.2s;
+            width: 235px;
         }
 
         button {
@@ -71,7 +69,12 @@
 
         .sectiontitle {
             font-size: 34px;
-            font-weight: 600;
+            font-weight: 700;
+            padding: 14px;
+        }
+        .sectionsubtitle {
+            font-size: 17px;
+            font-weight: 500;
             padding: 14px;
         }
 
@@ -90,7 +93,7 @@
             position: relative;
             width: 257px;
             height: 257px;
-            background-color: #EFF0F1;
+            background-color: #F2F2F7;
             padding: 14px;
             transition: 0.2s;
             margin: 14px;
@@ -100,11 +103,13 @@
             position: relative;
             width: 257px;
             height: 257px;
-            background-color: #EFF0F1;
+            background-color: #F2F2F7;
             padding: 14px;
             transition: 0.2s;
             margin: 14px;
-        }
+	    }
+  
+  
 
         .card:hover {
             padding: 28px;
@@ -123,7 +128,7 @@
         .large {
             display: flex;
             position: relative;
-            background-color: #EFF0F1;
+            background-color: #F2F2F7;
             padding: 14px;
             transition: 0.2s;
             margin: 14px;
@@ -148,16 +153,38 @@
             text-align: center;
         }
 
-        .display {
+        .content2 {
+            transition: 0.2s;
+            font-weight: 500;
             position: absolute;
-            top: 28px;
+            bottom: 26px;
             right: 0%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .display {
+            position: relative;
+            top: 14px;
+            transition: 0.2s;
+          	height: 100%;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        .display2 {
+            position: relative;
+            top: -14px;
+            transition: 0.2s;
+          	height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
         .image {
             position: absolute;
             top: 0px;
@@ -176,11 +203,9 @@
         }
 
         .imageplaceholder {
-            position: absolute;
-            top: 0px;
-            transition: 0.2s;
-            width: 183px;
-            margin: auto;
+          	position: absolute;
+          	transition: 0.2s;
+            width: 235px;
         }
 
         .buttons {
@@ -201,7 +226,7 @@
         }
 
         .card:hover .image, .card.hover .image { 
-            top: -14px;
+            top: -28px;
             width: 235px;
             transition: 0.2s;
         }          
@@ -231,11 +256,13 @@
         }  
         
         .videocard:hover .imageplaceholder, .videocard.hover .imageplaceholder { 
-            position: absolute;
-            top: -14px;
             width: 285px;
             transition: 0.2s;
             opacity: 0;
+        }  
+
+        .videocard:hover .display2, .videocard.hover .display2 { 
+            top: 0px;
         }  
 
         .videocard:hover .icon, .videocard.hover .icon { 
@@ -245,22 +272,22 @@
             right: 28px;
         }
 
-        .videocard:hover .title, .videocard.hover .title { 
-            opacity: 0;
-        }
 
         .videocard:hover .content, .videocard.hover .content { 
             transition: 0.2s;
+            opacity: 0;
             bottom: 28px;
+        }
+        .videocard:hover .content2, .videocard.hover .content2 { 
+            transition: 0.2s;
+            opacity: 0;
+            bottom: 40px;
         }
 
         .videocard:hover video, .videocard.hover video { 
             opacity: 1;
-            transition: 0.2;
-            top: 3px;
             transition: 0.2s;
-            width: 116.5px;
-            bottom: 28px;
+            width: 283px;
         }
 
         @media screen and (min-width: 1599px) {
@@ -351,6 +378,7 @@
     </style>
     <div class="section2">
         <div class="sectiontitle">Me</div>
+        
     </div>
     <div class="section">
         <a href="https://twitter.com/FetchRequested">
@@ -360,7 +388,7 @@
                     Alexey Primechaev
                 </div>
                 <div class="title secondary">
-                    Human Interface Designer
+                    
                 </div>
             </div>
             <div class="display">
@@ -377,7 +405,7 @@
         <div class="card">
             <div class="content">
                 <div class="title">
-                    Product Designer
+                    Senior Product Designer
                 </div>
                 <div class="title secondary">
                     At Open Broker
@@ -448,156 +476,75 @@
         </div>
     </a>
 
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Skills
-                </div>
-                <div class="title secondary">
-                    Some Of What I Do
-                </div>
-            </div>
-            <div class="display">
-                <img class="image" src="skills.png">
-                </div>
-            
-            
-        </div>
 
-    <a href="cv.pdf">
-        <div class="card">
-              <div class="content">
-                  <div class="title">
-                      CV
-                  </div>
-                  <div class="title secondary">
-                      For Fun
-                  </div>
-              </div>
-              <div class="display">
-                  <img class="image" src="cv.png">
-              </div>
-              
-              <div class="icon">↗</div>
-          </div>
-      </a>
 
-    <a href="mailto:asprimechaev@icloud.com">
-        <div class="card">
-            <div class="content">
-                <div class="title">
-                    Contact Me
-                </div>
-                <div class="title secondary">
-                    via Email
-                </div>
-            </div>
-            <div class="display">
-                <img class="image" src="mail.png">
-            </div>
 
-           
-            
-   
-        </div>
-    </a>
-
-    
-
-    
-
-    
-      
-
-        
-
-        
-
-        
-
-        
-
-        
 
 
     </div>
 
     <div class="section2">
-        <div class="sectiontitle">Shipped Products</div>
+        <div class="sectiontitle">Highlighted Products</div>
+        <div class="sectionsubtitle">Most recent projects, as well as work that I'm most proud of</div>
     </div>
     <div class="section">
-
-        
-      
-
-        
-
-    <a href="https://apps.apple.com/app/timepiece-unlimited-timers/id1506052142?l=en">
-        <div class="videocard">
-            <div class="content">
-                <div class="title">
-                    TimePiece
-                </div>
-                <div class="title secondary">
-                    Timers & Time-Tracking
-                </div>
-            </div>
-            <div class="display">
-                <video autoplay loop muted src="kinomini.mov"></video>
-                <img class="frame" src="frame.png">
-                <img class="imageplaceholder" src="timepieceicon.png">
-            </div>
-            <div class="icon">↗</div>
-        </div>
-    </a>
-
-
-    <a href="https://apps.apple.com/ru/app/открытие-брокер-инвестиции/id1323971242">
-        <div class="card">
-              <div class="content">
-                  <div class="title">
-                      Open Broker
-                  </div>
-                  <div class="title secondary">
-                      Stock Trading App
-                  </div>
-              </div>
-              <div class="display">
-                  <img class="image" src="openbrokericon.png">
-              </div>
-              
-              <div class="icon">↗</div>            
-          </div>
-      </a>
-
-
-      
-
-
-    
-        
-
-        
-
-        <a href="https://apps.apple.com/app/2006-camera/id1575592620">
-
+        <a href="timepiece/index.html">
             <div class="card">
-                <div class="content">
-                    <div class="title">
-                        2006 Camera
-                    </div>
-                    <div class="title secondary">
-                        Retro Low-Res Camera
-                    </div>
-                </div>
-                <div class="display">
-                    <img class="image" src="2006cameraicon.png">
-                </div>
-                <div class="icon">↗</div>                
-            </div>
-        </a>
+                  <div class="content">
+                      <div class="title">
+                        TimePiece
+                      </div>
+                      <div class="title secondary">
+                        Timers & Time-Tracking
+                      </div>
+                  </div>
+                  <div class="display">
+                      <img class="image" src="timepiece/icon.png">
+                  </div>
+                  
+                  <div class="icon">↗</div>            
+              </div>
+          </a>
 
-        <a href="https://apps.apple.com/app/reflect-be-mindful/id1573287504">
+          <a href="open/index.html">
+            <div class="card">
+                  <div class="content">
+                      <div class="title">
+                          Otrkitie Invest
+                      </div>
+                      <div class="title secondary">
+                          Stock Trading App
+                      </div>
+                  </div>
+                  <div class="display">
+                      <img class="image" src="open/icon.png">
+                  </div>
+                  
+                  <div class="icon">↗</div>            
+              </div>
+          </a>
+
+          <a href="timeline/index.html">
+            <div class="card">
+                  <div class="content">
+                      <div class="title">
+                        TimeLine
+                      </div>
+                      <div class="title secondary">
+                        Sequential Activities
+                      </div>
+                  </div>
+                  <div class="display">
+                      <img class="image" src="timeline/icon.png">
+                  </div>
+                  
+                  <div class="icon">↗</div>            
+              </div>
+          </a>
+
+          
+
+        <a href="reflect/index.html">
 
             <div class="card">
                 <div class="content">
@@ -609,31 +556,74 @@
                     </div>
                 </div>
                 <div class="display">
-                    <img class="image" src="reflecticon.png">
+                    <img class="image" src="reflect/icon.png">
                 </div>
                 <div class="icon">↗</div>                
             </div>
         </a>
 
-        <a href="https://apps.apple.com/app/reflect-ai-be-mindful/id1575792926">
+          <a href="yyyy/index.html">
 
             <div class="card">
                 <div class="content">
                     <div class="title">
-                        Reflect AI
+                        yyyy
                     </div>
                     <div class="title secondary">
-                        AI Assisted Mindfulness
+                        Do Everything In 20 Minutes
                     </div>
                 </div>
                 <div class="display">
-                    <img class="image" src="reflectaiicon.png">
+                    <img class="image" src="yyyy/icon.png">
+                </div>
+                <div class="icon">↗</div>                
+            </div>
+        </a>
+    </div>
+
+    <div class="section2">
+        <div class="sectiontitle">Other Shipped Products</div>
+    </div>
+    <div class="section">
+
+
+
+
+        
+   
+
+
+      
+
+
+    
+        
+
+        
+
+        <a href="2006/index.html">
+
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        2006 Camera
+                    </div>
+                    <div class="title secondary">
+                        Retro Low-Res Camera
+                    </div>
+                </div>
+                <div class="display">
+                    <img class="image" src="2006/icon.png">
                 </div>
                 <div class="icon">↗</div>                
             </div>
         </a>
 
-        <a href="https://apps.apple.com/app/moodline-simple-mood-tracking/id1500129608">
+        
+
+        
+
+        <a href="moodline/index.html">
 
             <div class="card">
                 <div class="content">
@@ -645,13 +635,13 @@
                     </div>
                 </div>
                 <div class="display">
-                    <img class="image" src="moodlineicon.png">
+                    <img class="image" src="moodline/icon.png">
                 </div>
                 <div class="icon">↗</div>                
             </div>
         </a>
 
-        <a href="https://apps.apple.com/app/rollercaller/id1506216664">
+        <a href="rollercaller/index.html">
 
             <div class="card">
                 <div class="content">
@@ -663,7 +653,25 @@
                     </div>
                 </div>
                 <div class="display">
-                    <img class="image" src="rollercallericon.png">
+                    <img class="image" src="rollercaller/icon.png">
+                </div>
+                <div class="icon">↗</div>                
+            </div>
+        </a>
+
+        <a href="reflectai/index.html">
+
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        Reflect AI
+                    </div>
+                    <div class="title secondary">
+                        AI Assisted Mindfulness
+                    </div>
+                </div>
+                <div class="display">
+                    <img class="image" src="reflectai/icon.png">
                 </div>
                 <div class="icon">↗</div>                
             </div>
@@ -672,7 +680,7 @@
 
         
 
-        <a href="https://apps.apple.com/app/rating10-rate-anything/id1491935617?l=en">
+        <a href="rating10/index.html">
 
             <div class="card">
                 <div class="content">
@@ -684,7 +692,7 @@
                     </div>
                 </div>
                 <div class="display">
-                    <img class="image" src="rating10icon.png">
+                    <img class="image" src="rating10/icon.png">
                 </div>
                 <div class="icon">↗</div>                
             </div>
@@ -692,7 +700,7 @@
 
        
 
-        <a href="https://apps.apple.com/app/readstack/id1558413561">
+        <a href="readstack/index.html">
 
             <div class="card">
                 <div class="content">
@@ -704,13 +712,31 @@
                     </div>
                 </div>
                 <div class="display">
-                    <img class="image" src="readstackicon.png">
+                    <img class="image" src="readstack/icon.png">
                 </div>
                 <div class="icon">↗</div>                
             </div>
         </a>
 
-        <a href="https://apps.apple.com/app/tap-me-every-x-minutes/id1511695154">
+        <a href="tinydo/index.html">
+
+            <div class="card">
+                <div class="content">
+                    <div class="title">
+                        TinyDo
+                    </div>
+                    <div class="title secondary">
+                        A Teeny-Tiny To-Do App
+                    </div>
+                </div>
+                <div class="display">
+                    <img class="image" src="tinydo/icon.png">
+                </div>
+                <div class="icon">↗</div>                
+            </div>
+        </a>
+
+        <a href="tapmeevery/index.html">
 
             <div class="card">
                 <div class="content">
@@ -722,7 +748,7 @@
                     </div>
                 </div>
                 <div class="display">
-                    <img class="image" src="tapmeicon.png">
+                    <img class="image" src="tapmeevery/icon.png">
                 </div>
                 <div class="icon">↗</div>                
             </div>
@@ -734,7 +760,7 @@
 
 
 
-    <a href="https://apps.apple.com/us/app/chroma-simple-screen-testing/id1404984004?ref=producthunt">
+    <a href="chroma/index.html">
 
         <div class="card">
             <div class="content">
@@ -746,7 +772,7 @@
                 </div>
             </div>
             <div class="display">
-                <img class="image" src="chroma.png">
+                <img class="image" src="chroma/icon.png">
                 </div>
                 <div class="icon">↗</div>
         </div>
@@ -819,7 +845,23 @@
     </div>
     <div class="section">
 
-        
+        <a href="cv.pdf">
+            <div class="card">
+                  <div class="content">
+                      <div class="title">
+                          CV
+                      </div>
+                      <div class="title secondary">
+                          For Fun
+                      </div>
+                  </div>
+                  <div class="display">
+                      <img class="image" src="cv.png">
+                  </div>
+                  
+                  <div class="icon">↗</div>
+              </div>
+          </a>
         
 
     <div class="card">
@@ -855,7 +897,6 @@
         </div>
     </a>
 
-    <!-- <a href="https://i.imgur.com/90xZeFM.mp4"> -->
 
         <a href="https://i.imgur.com/wc4rMJ2.mp4">
 
@@ -949,6 +990,7 @@
                 <div class="icon">↗</div>
         </div>
     </a>
+
 
 
     </div>
