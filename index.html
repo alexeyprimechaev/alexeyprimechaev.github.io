@@ -1,62 +1,293 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alexey Primechaev</title>
-
-  </head>
-
-  <body>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #000;
+        color: white;
+        padding: 40px;
+      }
+      
+      .apps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        row-gap: 96px;
+        column-gap: 32px;
+        margin-bottom: 40px;
+        margin-top: calc(50vh - 280px);
+        justify-items: center;
+      }
+      
+      .app-card {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .app-media {
+        position: relative;
+        width: 200px;
+        height: 433px;
+        margin-bottom: 12px;
+        transform: rotate(var(--video-rotation));
+        transition: transform 0.15s ease-in-out;
+        z-index: 10;
+      }
+      
+      .app-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        transform: scale(1.0);
+        transition: all 0.15s ease-in-out;
+      }
+      
+      .app-screenshot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 1;
+        transform: scale(1.0);
+        transition: all 0.15s ease;
+      }
+      
+      .app-media:hover .app-video {
+        opacity: 1;
+        transform: scale(1.15);
+      }
+      
+      .app-media:hover .app-screenshot {
+        opacity: 0;
+        transform: scale(1.15);
+      }
+      
+      .app-media:hover {
+        transform: rotate(0deg);
+      }
+      
+      .app-media:hover ~ .app-info {
+        opacity: 0.0;
+      }
+      
+      /* Dim other cards when any video is hovered */
+      /* .apps-grid:has(.app-media:hover) .app-card {
+        opacity: 0.2;
+        transition: opacity 0.15s ease;
+      }
+      
+      .apps-grid:has(.app-media:hover) .app-card:has(.app-media:hover) {
+        opacity: 1;
+      } */
+      
+      .app-info {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: opacity 0.15s ease;
+      }
+      
+      .app-title {
+        font-size: 17px;
+        font-weight: 500;
+      }
+      
+      .app-icon {
+        width: 32px;
+        height: 32px;
+        opacity: 0.8;
+        transform: rotate(var(--icon-rotation));
+      }
+      
 
-
-        a {
-            text-decoration: none;
-            color: #000000;
-            padding-left: 6px;
-            padding-right: 6px;
+      
+              @media (max-width: 768px) {
+          body {
+            padding: 24px;
+          }
+          
+          .apps-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 36px 24px;
+          }
+          
+          .app-media {
+            width: 200px;
+            height: 433px;
+          }
+          
+          .app-title {
+            font-size: 15px;
+          }
+          
+          .app-icon {
+            width: 28px;
+            height: 28px;
+          }
         }
-        
-        body {
-            display: flex;
-            height: 100%;
-            margin: 0;
-        }
-
-        .container {
-            margin: 0 auto;
-            display: inline-block;
-            justify-content: center;
-            align-items: center;
-        }
-        
-
-        .links {
-            padding-top: 32px;
-            padding-bottom: 32px;
-        }
-
-
-        
     </style>
+  </head>
+  <body>
+    <div class="apps-grid">
 
-
-    <div class="container">
-        <div class="links">
-            <a href="cv.pdf" class="textlink">CV</a>
-            <a href="portfolio/" class="textlink">Portfolio</a>
-            <a href="mailto: leks@lekskeks.com" class="textlink">Email</a>
-            <a href="https://twitter.com/leksingtonen" class="textlink">Twitter</a>
-            <a href="https://instagram.com/aleshavinsteogo" class="textlink">Instagram</a>
-            <a href="https://t.me/number16" class="textlink">Telegram</a>
+      <a href="juu/" class="app-card">
+        <div class="app-media">
+          <img src="juu/Image1.png" alt="Juu Screenshot" class="app-screenshot">
+          <video class="app-video" autoplay muted loop>
+            <source src="juu/preview.mp4" type="video/mp4">
+          </video>
         </div>
-    </div>
+        <div class="app-info">
+          <img src="juu/icon.png" alt="Juu Icon" class="app-icon">
+          <div class="app-title">Juu Carwash</div>
+        </div>
+      </a>
 
+      
+      
+      <a href="shoot/" class="app-card">
+        <div class="app-media">
+          <img src="shoot/Image1.png" alt="Shoot Screenshot" class="app-screenshot">
+          <video class="app-video" autoplay muted loop>
+            <source src="shoot/preview.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="app-info">
+          <img src="shoot/icon.png" alt="Shoot Icon" class="app-icon">
+          <div class="app-title">RAW Camera Shoot</div>
+        </div>
+      </a>
+
+      <a href="bigbucks/" class="app-card">
+        <div class="app-media">
+          <img src="bigbucks/Image1.png" alt="BigBucks Screenshot" class="app-screenshot">
+          <video class="app-video" autoplay muted loop>
+            <source src="bigbucks/preview.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="app-info">
+          <img src="bigbucks/icon.png" alt="BigBucks Icon" class="app-icon">
+          <div class="app-title">The Big Bucks</div>
+        </div>
+      </a>
+
+      <a href="samokat/" class="app-card">
+        <div class="app-media">
+          <img src="samokat/Image1.png" alt="Samokat Screenshot" class="app-screenshot">
+          <video class="app-video" autoplay muted loop>
+            <source src="samokat/preview.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="app-info">
+          <img src="samokat/icon.png" alt="Samokat Icon" class="app-icon">
+          <div class="app-title">Samokat</div>
+        </div>
+      </a>
+
+      <a href="2006CAM/" class="app-card">
+        <div class="app-media">
+          <img src="2006CAM/Image1.png" alt="2006CAM Screenshot" class="app-screenshot">
+          <video class="app-video" autoplay muted loop>
+            <source src="2006CAM/preview.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="app-info">
+          <img src="2006CAM/icon.png" alt="2006CAM Icon" class="app-icon">
+          <div class="app-title">2006CAM Retro Camera</div>
+        </div>
+      </a>
+
+
+      <a href="openbroker/" class="app-card">
+        <div class="app-media">
+          <img src="openbroker/Image1.png" alt="OpenBroker Screenshot" class="app-screenshot">
+          <video class="app-video" autoplay muted loop>
+            <source src="openbroker/preview.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="app-info">
+          <img src="openbroker/icon.png" alt="OpenBroker Icon" class="app-icon">
+          <div class="app-title">Open Broker</div>
+        </div>
+      </a>
+
+      <a href="nuke/" class="app-card">
+        <div class="app-media">
+          <img src="nuke/Image1.png" alt="Nuke Screenshot" class="app-screenshot">
+          <video class="app-video" autoplay muted loop>
+            <source src="nuke/preview.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="app-info">
+          <img src="nuke/icon.png" alt="Nuke Icon" class="app-icon">
+          <div class="app-title">Nuke</div>
+        </div>
+      </a>
+
+      <a href="pomodoro/" class="app-card">
+        <div class="app-media">
+          <img src="pomodoro/Image1.png" alt="Pomodoro Screenshot" class="app-screenshot">
+          <video class="app-video" autoplay muted loop>
+            <source src="pomodoro/preview.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="app-info">
+          <img src="pomodoro/icon.png" alt="Pomodoro Icon" class="app-icon">
+          <div class="app-title">Pomodoro</div>
+        </div>
+      </a>
+
+      <a href="ruler/" class="app-card">
+        <div class="app-media">
+          <img src="ruler/Image1.png" alt="Ruler Screenshot" class="app-screenshot">
+          <video class="app-video" autoplay muted loop>
+            <source src="ruler/preview.mov" type="video/mp4">
+          </video>
+        </div>
+        <div class="app-info">
+          <img src="ruler/icon.png" alt="Ruler Icon" class="app-icon">
+          <div class="app-title">Ruler</div>
+        </div>
+      </a>
+
+      
+    </div>
     
-    
-    
+    <script>
+      // Generate random rotation for each app icon
+      const appIcons = document.querySelectorAll('.app-icon');
+      appIcons.forEach((icon) => {
+        const iconRotation = Math.random() * 15 - 7.5;
+        icon.style.setProperty('--icon-rotation', `${iconRotation}deg`);
+      });
+      
+      // Generate random rotation for each media container
+      const appMedias = document.querySelectorAll('.app-media');
+      appMedias.forEach((media) => {
+        const videoRotation = (Math.random() * 2 + 2) * (Math.random() < 0.5 ? -1 : 1);
+        media.style.setProperty('--video-rotation', `${videoRotation}deg`);
+      });
+    </script>
   </body>
 </html>
