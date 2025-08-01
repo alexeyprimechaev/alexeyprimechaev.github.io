@@ -69,6 +69,15 @@
         height: auto;
       }
       
+      .app-info a {
+        display: inline-block;
+        line-height: 0;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+      }
+      
       .links-list {
         margin-top: 24px;
       }
@@ -84,6 +93,17 @@
       
       .links-list a:hover {
         opacity: 1;
+      }
+      
+      .links-list .text {
+        font-size: 17px;
+        font-weight: 500;
+        color: white;
+        opacity: 0.65;
+        display: block;
+        margin-bottom: 8px;
+        transform: rotate(var(--link-rotation));
+        max-width: 320px;
       }
       
       /* Desktop: show mobile viewport as regular content */
@@ -258,13 +278,13 @@
   <body>
     <!-- Fixed Text Overlay -->
     <div class="text-overlay">
-      <div class="text-title">Juu<br>Carwash</div>
+      <div class="text-title">Juu Carwash</div>
       <div class="app-info">
-        <img src="icon.png" alt="Juu Carwash App Icon" class="app-icon">
-        <img src="appstore.svg" alt="Download on the App Store" class="app-store-badge">
+        <a href="javascript:alert('Coming soon')"><img src="icon.png" alt="Juu Carwash App Icon" class="app-icon"></a>
+        <a href="javascript:alert('Coming soon')"><img src="appstore.svg" alt="Download on the App Store" class="app-store-badge"></a>
       </div>
       <div class="links-list">
-        <a href="https://www.spottedinprod.com/apps/juu" target="_blank">spottedinprod.com/apps/juu</a>
+        <div class="text">Carwash service in Kazakhstan that I helped design. This is a SwiftUI prototype that I made</div>
       </div>
     </div>
     
@@ -285,11 +305,11 @@
         <div class="mobile-text-overlay">
           <div class="text-title">Juu Carwash</div>
           <div class="app-info">
-            <img src="icon.png" alt="Juu Carwash App Icon" class="app-icon">
-            <img src="appstore.svg" alt="Download on the App Store" class="app-store-badge">
+            <a href="javascript:alert('Coming soon')"><img src="icon.png" alt="Juu Carwash App Icon" class="app-icon"></a>
+            <a href="javascript:alert('Coming soon')"><img src="appstore.svg" alt="Download on the App Store" class="app-store-badge"></a>
           </div>
           <div class="links-list">
-            <a href="https://www.spottedinprod.com/apps/juu" target="_blank">spottedinprod.com/apps/juu</a>
+            <div class="text">Carwash service in Kazakhstan that I helped design. This is a SwiftUI prototype that I made</div>
           </div>
         </div>
       </div>
@@ -326,11 +346,11 @@
       document.documentElement.style.setProperty('--text-rotation', `${textRotation}deg`);
       document.documentElement.style.setProperty('--icon-rotation', `${iconRotation}deg`);
       
-      // Generate random rotation for each link
-      const links = document.querySelectorAll('.links-list a');
-      links.forEach((link, index) => {
+      // Generate random rotation for each link and text
+      const linksAndText = document.querySelectorAll('.links-list a, .links-list .text');
+      linksAndText.forEach((element, index) => {
         const linkRotation = Math.random() * 10 - 5;
-        link.style.setProperty('--link-rotation', `${linkRotation}deg`);
+        element.style.setProperty('--link-rotation', `${linkRotation}deg`);
       });
       
       // For now, let's just add stroke to all images for testing
