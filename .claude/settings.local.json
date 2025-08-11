@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit:*)",
+      "Bash(curl:*)",
+      "Bash(git add:*)",
+      "Bash(find:*)",
+      "Bash(for:*)",
+      "Bash(do mv \"$file\" \"$file%.PNG.png\")",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(mv:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": []
+  }
+}

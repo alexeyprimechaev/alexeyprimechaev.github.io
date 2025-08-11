@@ -1,0 +1,5 @@
+
+--- Processing: 2006CAM/preview.mp4 ---
+  vcodec=h264 size=15494897 dur=23.216667 res=1180x2556 fps=60/1 trc=iec61966-2-1 prim=bt709 cspace=unknown
+  target_bitrate=2669616bps hdr=0
+  -> h264_videotoolbox (High, nv12) -> 2006CAM/preview_compressed.mp4
