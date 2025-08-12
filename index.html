@@ -317,6 +317,22 @@
     </div>
     
     <script>
+      // Preload all images for each app
+      const preloadImages = () => {
+        const appMedias = document.querySelectorAll('.app-media');
+        appMedias.forEach((media) => {
+          const maxImages = parseInt(media.dataset.maxImages);
+          const appName = media.dataset.app;
+          const extension = media.dataset.extension;
+          
+          // Preload all images for this app (starting from image 2, since image 1 is already loaded)
+          for (let i = 2; i <= maxImages; i++) {
+            const img = new Image();
+            img.src = `${appName}/Image${i}.${extension}`;
+          }
+        });
+      };
+
       // Generate random rotation for each app icon
       const appIcons = document.querySelectorAll('.app-icon');
       appIcons.forEach((icon) => {
@@ -330,6 +346,9 @@
         const videoRotation = (Math.random() * 2 + 2) * (Math.random() < 0.5 ? -1 : 1);
         media.style.setProperty('--video-rotation', `${videoRotation}deg`);
       });
+
+      // Preload all images when page loads
+      preloadImages();
 
       // Generate random rotations for info card
       const infoCardName = document.querySelector('.info-card .name');
