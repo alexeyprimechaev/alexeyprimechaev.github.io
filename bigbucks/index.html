@@ -122,10 +122,16 @@
         position: relative;
       }
       
-      .video-item video {
+      /* Desktop: show desktop video, hide mobile video */
+      .desktop-video {
+        display: block;
         width: 100vw;
         height: 100vh;
         object-fit: cover;
+      }
+      
+      .mobile-video {
+        display: none;
       }
       
       .spacer {
@@ -204,7 +210,13 @@
             padding: 16px;
           }
           
-          .video-item video {
+          /* Hide desktop video on mobile, show mobile video */
+          .desktop-video {
+            display: none !important;
+          }
+          
+          .mobile-video {
+            display: block !important;
             width: 100% !important;
             height: 100% !important;
             max-height: 40vh;
@@ -294,9 +306,11 @@
         <div class="spacer"></div>
         <!-- Video Item -->
         <div class="video-item">
-          <video autoplay muted loop>
+          <video class="desktop-video" autoplay muted loop>
             <source src="video.mp4" type="video/mp4">
-            <!-- Fallback for browsers that don't support video -->
+          </video>
+          <video class="mobile-video" muted loop controls>
+            <source src="video.mp4" type="video/mp4">
           </video>
         </div>
         <div class="spacer"></div>
